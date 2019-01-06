@@ -45,9 +45,8 @@ const styles = StyleSheet.create({
 
 class WalletReceive extends Component {
   static propTypes = {
-    navigation: PropTypes.shape({
-      goBack: PropTypes.func.isRequired,
-    }).isRequired,
+    navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired })
+      .isRequired,
     walletAddress: PropTypes.string.isRequired,
   };
 
@@ -64,31 +63,32 @@ class WalletReceive extends Component {
               color="#090909"
               value={this.props.walletAddress}
               size={150}
-            />
-          </View>
+            />{' '}
+          </View>{' '}
           <View>
-            <Text style={styles.addressTitle}>Address</Text>
-            <Text style={styles.walletAddress}>{this.props.walletAddress}</Text>
-          </View>
+            <Text style={styles.addressTitle}> Address </Text>{' '}
+            <Text style={styles.walletAddress}>
+              {' '}
+              {this.props.walletAddress}{' '}
+            </Text>{' '}
+          </View>{' '}
           <View style={styles.buttonContainer}>
             <SecondaryButton
               onPress={() => {
                 Share.share({
                   message: this.props.walletAddress,
-                  title: 'My Eltwallet address',
+                  title: 'My Metta Wallet address',
                 });
               }}
               text="Share"
             />
-          </View>
-        </SafeAreaView>
+          </View>{' '}
+        </SafeAreaView>{' '}
       </GradientBackground>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  walletAddress: state.walletAddress,
-});
+const mapStateToProps = state => ({ walletAddress: state.walletAddress });
 
 export default connect(mapStateToProps)(WalletReceive);

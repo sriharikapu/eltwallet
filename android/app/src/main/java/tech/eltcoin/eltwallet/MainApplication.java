@@ -3,6 +3,14 @@ package tech.eltcoin.eltwallet;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
+import br.com.classapp.RNSensitiveInfo.RNSensitiveInfoPackage;
+import com.bitgo.randombytes.RandomBytesPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
+import com.aakashns.reactnativedialogs.ReactNativeDialogsPackage;
+import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
+import org.reactnative.camera.RNCameraPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -31,6 +39,14 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SvgPackage(),
+            new RNSensitiveInfoPackage(),
+            new RandomBytesPackage(),
+            new LinearGradientPackage(),
+            new ReactNativeFingerprintScannerPackage(),
+            new ReactNativeDialogsPackage(),
+            new ReactNativeConfigPackage(),
+            new RNCameraPackage(),
             new ReactNativeConfigPackage(),
             new SvgPackage(),
             new LinearGradientPackage(),

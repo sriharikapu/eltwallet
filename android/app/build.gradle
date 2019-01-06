@@ -41,7 +41,7 @@ def pass = getPassword("vfaramond","eltwallet_keystore")
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    buildToolsVersion = "26.0.3"
 
     defaultConfig {
         applicationId "tech.eltcoin.eltwallet"
@@ -93,6 +93,14 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-svg')
+    compile project(':react-native-sensitive-info')
+    compile project(':react-native-randombytes')
+    compile project(':react-native-linear-gradient')
+    compile project(':react-native-fingerprint-scanner')
+    compile project(':react-native-dialogs')
+    compile project(':react-native-config')
+    compile project(':react-native-camera')
     implementation project(':react-native-config')
     implementation project(':react-native-svg')
     implementation project(':react-native-sensitive-info')

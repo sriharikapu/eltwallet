@@ -25,7 +25,7 @@ export default class AnalyticsUtils {
       };
     }
 
-    let anonymousId = await AsyncStorage.getItem('@ELTWALLET:anonymousId');
+    let anonymousId = await AsyncStorage.getItem('@METTAWALLET:anonymousId');
 
     if (anonymousId) {
       return {
@@ -35,7 +35,7 @@ export default class AnalyticsUtils {
 
     anonymousId = guid();
 
-    await AsyncStorage.setItem('@ELTWALLET:anonymousId', anonymousId);
+    await AsyncStorage.setItem('@METTAWALLET:anonymousId', anonymousId);
 
     return {
       anonymousId,

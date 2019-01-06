@@ -39,4 +39,4 @@ const App = () => (
   </Provider>
 );
 
-AppRegistry.registerComponent('Eltwallet', () => App);
+AppRegistry.registerComponent('eltwallet', () => App);

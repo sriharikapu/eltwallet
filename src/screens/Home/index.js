@@ -7,7 +7,7 @@ import {
   PrimaryButton,
   SecondaryButton,
 } from '../../components';
-import logo from './images/logo.png';
+import logo from '../images/logo.png';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     width: '65%',
   },
   buttonsContainer: {
-    paddingHorizontal: 15,
+    paddingHorizontal: 25,
+    paddingBottom: 15,
     width: '100%',
   },
 });
